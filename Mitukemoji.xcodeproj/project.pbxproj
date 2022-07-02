@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3CAA613ADA2EDD48622CB44F /* Pods_Mitukemoji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D43B8359352F03AC6D1FE0 /* Pods_Mitukemoji.framework */; };
 		B24DA7DC286FBCE0007DE6EC /* GoogleAdID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24DA7DB286FBCE0007DE6EC /* GoogleAdID.swift */; };
-		B279A3BA2870EBBB00FB07C9 /* GADRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B279A3B92870EBBB00FB07C9 /* GADRepository.swift */; };
+		B2855F0A2870FEBE00D35AEE /* GADRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2855F092870FEBE00D35AEE /* GADRepository.swift */; };
 		B28F057628665FEA00813305 /* CsvConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28F057528665FEA00813305 /* CsvConversion.swift */; };
 		B28F057C2866600600813305 /* emoji.csv in Resources */ = {isa = PBXBuildFile; fileRef = B28F05782866600600813305 /* emoji.csv */; };
 		B28F057D2866600600813305 /* katakana_1column_unicode.csv in Resources */ = {isa = PBXBuildFile; fileRef = B28F05792866600600813305 /* katakana_1column_unicode.csv */; };
@@ -41,7 +41,7 @@
 		3E6B276B8752BB8E90E4E23B /* Pods-Mitukemoji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mitukemoji.release.xcconfig"; path = "Target Support Files/Pods-Mitukemoji/Pods-Mitukemoji.release.xcconfig"; sourceTree = "<group>"; };
 		57D43B8359352F03AC6D1FE0 /* Pods_Mitukemoji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mitukemoji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24DA7DB286FBCE0007DE6EC /* GoogleAdID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAdID.swift; sourceTree = "<group>"; };
-		B279A3B92870EBBB00FB07C9 /* GADRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GADRepository.swift; path = ../../../project/LineConnectingGame/LineConnectingGame/GADRepository.swift; sourceTree = "<group>"; };
+		B2855F092870FEBE00D35AEE /* GADRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GADRepository.swift; sourceTree = "<group>"; };
 		B28F057528665FEA00813305 /* CsvConversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CsvConversion.swift; sourceTree = "<group>"; };
 		B28F05782866600600813305 /* emoji.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = emoji.csv; sourceTree = "<group>"; };
 		B28F05792866600600813305 /* katakana_1column_unicode.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = katakana_1column_unicode.csv; sourceTree = "<group>"; };
@@ -93,8 +93,8 @@
 		B24DA7DA286FBCCE007DE6EC /* GoogleAD */ = {
 			isa = PBXGroup;
 			children = (
-				B279A3B92870EBBB00FB07C9 /* GADRepository.swift */,
 				B24DA7DB286FBCE0007DE6EC /* GoogleAdID.swift */,
+				B2855F092870FEBE00D35AEE /* GADRepository.swift */,
 			);
 			path = GoogleAD;
 			sourceTree = "<group>";
@@ -353,11 +353,11 @@
 				B28F5CBA2863B42900B6B18B /* CollectionViewCell.swift in Sources */,
 				B28F58A6286E707900BA9EB6 /* GameFinishType.swift in Sources */,
 				B29FC165286BB92A00BB3489 /* QuestionUsecase.swift in Sources */,
+				B2855F0A2870FEBE00D35AEE /* GADRepository.swift in Sources */,
 				B29FC163286BB84400BB3489 /* Question.swift in Sources */,
 				B24DA7DC286FBCE0007DE6EC /* GoogleAdID.swift in Sources */,
 				B28F5CA82863B12400B6B18B /* SceneDelegate.swift in Sources */,
 				B28F057628665FEA00813305 /* CsvConversion.swift in Sources */,
-				B279A3BA2870EBBB00FB07C9 /* GADRepository.swift in Sources */,
 				B29FC15D286BA1D600BB3489 /* RootNavigationController.swift in Sources */,
 				B29FC15B286BA0D900BB3489 /* StartViewController.swift in Sources */,
 				B29FC167286BBC9700BB3489 /* CoinRepository.swift in Sources */,
