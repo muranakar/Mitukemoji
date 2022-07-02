@@ -12,5 +12,7 @@ class CollectionViewCell: UICollectionViewCell {
 
     func configure(text: String) {
         label.text = text
+        contentView.backgroundColor = UIColor(named: "cellColor")
+        contentView.layer.cornerRadius = 15
     }
 }

@@ -11,7 +11,7 @@
         <!--Result View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="ResultViewController" customModule="CollectionViewSample2022_06_23" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="ResultViewController" customModule="Mitukemoji" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,21 +80,21 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Srh-2f-qPc">
                                         <rect key="frame" x="0.0" y="0.0" width="167" height="50"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="もう一度">
+                                        <state key="normal" title="もういちど">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Zdh-ak-YnO" kind="unwind" unwindAction="backToGameViewControllerWithSegue:" id="USM-Tg-6um"/>
+                                            <segue destination="Zdh-ak-YnO" kind="unwind" unwindAction="backToGameViewControllerWithSegue:" id="l1q-X3-E7T"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dqd-S4-leT">
                                         <rect key="frame" x="187" y="0.0" width="167" height="50"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="最初にもどる">
+                                        <state key="normal" title="タイトル">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Zdh-ak-YnO" kind="unwind" unwindAction="backToStartViewControllerWithSegue:" id="vJ2-0A-r6E"/>
+                                            <segue destination="Zdh-ak-YnO" kind="unwind" unwindAction="backToStartViewControllerWithSegue:" id="gOW-2A-mwW"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -132,7 +132,7 @@
                                     <constraint firstAttribute="height" constant="80" id="qUY-8k-4pS"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vJ6-SL-Xyy">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vJ6-SL-Xyy" customClass="GADBannerView">
                                 <rect key="frame" x="0.0" y="812" width="414" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -158,6 +158,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bannerView" destination="vJ6-SL-Xyy" id="WkT-nF-nub"/>
                         <outlet property="coinsObtainedInOneGameLabel" destination="kSa-0C-BQa" id="VpL-fO-oO5"/>
                         <outlet property="initialSceneButton" destination="Dqd-S4-leT" id="e9Y-sN-svo"/>
                         <outlet property="replayButton" destination="Srh-2f-qPc" id="5S1-Fn-efW"/>

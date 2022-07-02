@@ -11,7 +11,7 @@
         <!--Start View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="StartViewController" customModule="CollectionViewSample2022_06_23" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="StartViewController" customModule="Mitukemoji" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,8 +32,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="おなじもじをみつけよう" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRU-ub-g9m">
-                                <rect key="frame" x="10" y="189" width="394" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ーーーあそびかたーーー ・○のなかのもじをみつけよう ・５かい、まちがえるとおわり ・60びょうで、おわり" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRU-ub-g9m">
+                                <rect key="frame" x="40" y="189" width="334" height="81.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -125,7 +125,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tPm-mM-SAW">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tPm-mM-SAW" customClass="GADBannerView">
                                 <rect key="frame" x="0.0" y="812" width="414" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -154,16 +154,18 @@
                             <constraint firstItem="JfV-Tt-vh8" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.45" id="Off-Qy-5ea"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="93n-vK-XNO" secondAttribute="trailing" constant="10" id="QEC-Ys-POy"/>
                             <constraint firstItem="tPm-mM-SAW" firstAttribute="top" secondItem="JfV-Tt-vh8" secondAttribute="bottom" constant="20" id="Sbd-K6-F3j"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yRU-ub-g9m" secondAttribute="trailing" constant="10" id="Yk9-bH-Y9Q"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yRU-ub-g9m" secondAttribute="trailing" constant="40" id="Yk9-bH-Y9Q"/>
                             <constraint firstAttribute="trailing" secondItem="JfV-Tt-vh8" secondAttribute="trailing" constant="30" id="f6Z-xp-cx2"/>
                             <constraint firstItem="TJx-hL-8jV" firstAttribute="centerY" secondItem="Dtf-GT-K3m" secondAttribute="centerY" id="i2P-je-jEc"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Dtf-GT-K3m" secondAttribute="trailing" constant="20" id="lBx-ve-Tc9"/>
-                            <constraint firstItem="yRU-ub-g9m" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="liG-5o-dTc"/>
+                            <constraint firstItem="yRU-ub-g9m" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="liG-5o-dTc"/>
                             <constraint firstItem="tPm-mM-SAW" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="oJK-PR-ISx"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bannerView" destination="tPm-mM-SAW" id="yUB-NQ-FWf"/>
                         <outlet property="coinLabel" destination="Dtf-GT-K3m" id="wLC-nn-dQM"/>
+                        <outlet property="descriptionLabel" destination="yRU-ub-g9m" id="uaa-8x-kGq"/>
                         <outlet property="emojiButton" destination="CzN-HE-oY4" id="hyZ-a7-jXh"/>
                         <outlet property="hiraganaButton" destination="7XG-hI-psc" id="9fT-ra-zos"/>
                         <outlet property="katakanaButton" destination="bsy-u7-S8H" id="lzn-2m-ywR"/>

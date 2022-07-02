@@ -6,12 +6,17 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class ResultViewController: UIViewController {
     @IBOutlet private weak var coinsObtainedInOneGameLabel: UILabel!
     @IBOutlet private weak var totalCoinsLabel: UILabel!
     @IBOutlet private weak var replayButton: UIButton!
     @IBOutlet private weak var initialSceneButton: UIButton!
+
+    // Google広告
+    @IBOutlet weak private var bannerView: GADBannerView!
+
     private var allButton: [UIButton] {
         [
             replayButton,
@@ -24,14 +29,16 @@ class ResultViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        convfigureViewButton()
         configureViewCoinLabel()
-        print(totalCoin)
-        print(oneGameGetCoin)
-        print(gameFinishType)
+        configureAdBannar()
     }
 
-    required init?(coder: NSCoder,gameFinishType: GameFinishType,oneGameGetCoin: Int) {
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        configureViewButton()
+    }
+
+    required init?(coder: NSCoder, gameFinishType: GameFinishType, oneGameGetCoin: Int) {
         self.totalCoin = CoinRepository.load() ?? 0
         self.oneGameGetCoin = oneGameGetCoin
         self.gameFinishType = gameFinishType
@@ -52,10 +59,19 @@ class ResultViewController: UIViewController {
         shareOnOtherApp()
     }
 
+    private func configureAdBannar() {
+        // GADBannerViewのプロパティを設定
+        bannerView.adUnitID = "\(GoogleAdID.bannerID)"
+        bannerView.rootViewController = self
+        // 広告読み込み
+        bannerView.load(GADRequest())
+    }
+
     private func shareOnTwitter() {
         // シェアするテキストを作成
         let text = "みつけもじ！同じ文字をみつけよう！"
         // swiftlint:disable:next line_length
+        // TODO:: 共有文章記述必要。
         let hashTag = ""
         let completedText = text + "\n" + hashTag
 
@@ -90,7 +106,7 @@ class ResultViewController: UIViewController {
 
         if UIApplication.shared.canOpenURL(url) {
             if #available(iOS 10.0, *) {
-                UIApplication.shared.open(url, options: [:], completionHandler: { (succes) in
+                UIApplication.shared.open(url, options: [:], completionHandler: { _ in
                     //  LINEアプリ表示成功
                 })
             } else {
@@ -102,7 +118,7 @@ class ResultViewController: UIViewController {
                                                     message: "LINEがインストールされていません",
                                                     preferredStyle: UIAlertController.Style.alert)
             alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default))
-            present(alertController,animated: true,completion: nil)
+            present(alertController, animated: true, completion: nil)
         }
     }
 
@@ -118,12 +134,12 @@ class ResultViewController: UIViewController {
         coinsObtainedInOneGameLabel.text = "×　\(oneGameGetCoin)"
         totalCoinsLabel.text = "×  \(totalCoin)"
     }
-    private func convfigureViewButton() {
+    private func configureViewButton() {
         allButton.forEach { button in
             button.layer.borderWidth = 3
             button.layer.borderColor = UIColor.init(named: "string")?.cgColor
             button.layer.cornerRadius = 10
-            button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .regular)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .bold)
             button.setTitleColor(UIColor.init(named: "string"), for: .normal)
             button.setTitleColor(.gray, for: .disabled)
         }
