@@ -24,7 +24,7 @@ class GameViewController: UIViewController {
     private var missCount: Int = 0
     private var gameFinishType: GameFinishType?
     // MARK: - タイマー関係のプロパティ
-    private let time: Float = 5.0
+    private let time: Float = 60.0
     private var cnt: Float = 0
     private var count: Float { time - cnt }
     private var GameTimer: Timer?
