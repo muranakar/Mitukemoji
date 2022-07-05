@@ -111,11 +111,11 @@ class GameViewController: UIViewController {
             }
         )
     }
-    //　Google広告を３回に表示するメソッド
+    //　Google広告を2回に表示するメソッド
     func showGoogleIntitialAdOnceInThreeTimesAndPerformSegue() {
-        // 広告を３回に、１回表示する処理
+        // 広告を2回に、１回表示する処理
         let adNum = GADRepository.processAfterAddGADNumPulsOneAndSaveGADNum()
-        if adNum % 3 == 0 {
+        if adNum % 2 == 0 {
             if interstitial != nil {
                 interstitial?.present(fromRootViewController: self)
                 performSegue(withIdentifier: "result", sender: nil)
