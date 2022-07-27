@@ -58,6 +58,13 @@ class ResultViewController: UIViewController {
     @IBAction private func shareOtherApp(_ sender: Any) {
         shareOnOtherApp()
     }
+    @IBAction private func review(_ sender: Any) {
+        let urlString = URL(string: "https://apps.apple.com/om/app/id1633155568?action=write-review")
+        guard let writeReviewURL = urlString else {
+            fatalError("Expected a valid URL")
+        }
+        UIApplication.shared.open(writeReviewURL, options: [:], completionHandler: nil)
+    }
 
     private func configureAdBannar() {
         // GADBannerViewのプロパティを設定
@@ -69,10 +76,9 @@ class ResultViewController: UIViewController {
 
     private func shareOnTwitter() {
         // シェアするテキストを作成
-        let text = "みつけもじ！同じ文字をみつけよう！"
+        let text = "みつけもじ！同じ文字をみつけよう！合計\(totalCoin)コイン獲得！"
         // swiftlint:disable:next line_length
-        // TODO:: 共有文章記述必要。
-        let hashTag = ""
+        let hashTag = "#脳トレ #認知症 #習慣 #ゲーム #高次脳機能 #リハビリ\n https://apps.apple.com/om/app/id1633155568"
         let completedText = text + "\n" + hashTag
 
         // 作成したテキストをエンコード
@@ -88,7 +94,7 @@ class ResultViewController: UIViewController {
     private  func shareOnLine() {
         let urlscheme: String = "https://line.me/R/share?text="
         // swiftlint:disable:next line_length
-        let message = "みつけもじ！同じ文字をみつけよう！"
+        let message = "みつけもじ！同じ文字をみつけよう！合計\(totalCoin)コイン獲得！\n#脳トレ #認知症 #習慣 #ゲーム #高次脳機能 #リハビリ\n https://apps.apple.com/om/app/id1633155568"
 
         // line:/msg/text/(メッセージ)
         let urlstring = urlscheme + "/" + message

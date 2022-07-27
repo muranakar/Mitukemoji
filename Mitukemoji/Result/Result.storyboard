@@ -106,24 +106,31 @@
                                 <rect key="frame" x="0.0" y="702" width="414" height="80"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="GfV-Qt-1C3">
-                                        <rect key="frame" x="0.0" y="0.0" width="138" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="80"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="m69-2J-4Nz" appends="YES" id="WkY-I3-Uts"/>
                                         </connections>
                                     </imageView>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LINE_Brand_icon" translatesAutoresizingMaskIntoConstraints="NO" id="fc1-9X-2P1">
-                                        <rect key="frame" x="138" y="0.0" width="138" height="80"/>
+                                        <rect key="frame" x="103.5" y="0.0" width="103.5" height="80"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="4qH-wg-4Ss" appends="YES" id="MBm-rp-0bG"/>
                                         </connections>
                                     </imageView>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="otherApp" translatesAutoresizingMaskIntoConstraints="NO" id="xfi-bi-lwY">
-                                        <rect key="frame" x="276" y="0.0" width="138" height="80"/>
+                                        <rect key="frame" x="207" y="0.0" width="103.5" height="80"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="kcJ-bV-WLo" appends="YES" id="NEL-FO-NvM"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="review" translatesAutoresizingMaskIntoConstraints="NO" id="iS9-bC-uFk">
+                                        <rect key="frame" x="310.5" y="0.0" width="103.5" height="80"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="dbK-cS-q9V" appends="YES" id="GXQ-09-hgu"/>
                                         </connections>
                                     </imageView>
                                 </subviews>
@@ -182,6 +189,11 @@
                         <action selector="shareOtherApp:" destination="Y6W-OH-hqX" id="pfU-33-9IU"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="dbK-cS-q9V">
+                    <connections>
+                        <action selector="review:" destination="Y6W-OH-hqX" id="MWV-7z-2v3"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-17.39130434782609" y="78.348214285714278"/>
         </scene>
@@ -190,6 +202,7 @@
         <image name="014_gold" width="500" height="500"/>
         <image name="LINE_Brand_icon" width="1001" height="1000"/>
         <image name="otherApp" width="1080" height="1080"/>
+        <image name="review" width="1080" height="1080"/>
         <image name="twitter" width="256" height="256"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

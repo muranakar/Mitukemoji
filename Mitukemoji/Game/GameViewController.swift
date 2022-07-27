@@ -276,10 +276,8 @@ extension GameViewController: UICollectionViewDelegateFlowLayout {
 extension GameViewController: GADFullScreenContentDelegate {
     /// Tells the delegate that the ad failed to present full screen content.
     func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
-//        performSegue(withIdentifier: "result", sender: nil)
     }
     /// Tells the delegate that the ad dismissed full screen content.
     func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
-//        performSegue(withIdentifier: "result", sender: nil)
     }
 }
